@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    gap: 10px;
+}
+* {
+    font-size: 1.1em;
+}
