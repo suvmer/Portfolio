@@ -9,11 +9,14 @@ html {
 }
 body {
     width: 100%;
+    position: relative;
 }
 .header {
-    position: fixed;
+    position: sticky;
+    top: 0px;
+    left: 0px;
     display: flex;
-    gap: 1em;
+    gap: 1rem;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -43,15 +46,14 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 } 
 .main {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100vh;
     width: 100vw;
     background-image: url("/bg.jpg");
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .main::before {
@@ -64,28 +66,29 @@ body {
 }
 
 .greeting {
+    z-index: 1;
     display: flex;
-    align-items: start;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
 
 .text {
-    font-size: 2em;
+    font-size: 2rem;
     color: white;
     font-family: "Trebuchet MS";
     font-weight: 300;
 }
 .text_small {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 .text_offset-small {
-    margin-top: 1em;
+    margin-top: 1rem;
 }
 .text_inverse {
     color: black;
 }
 .text_big {
-    font-size: 5em;
+    font-size: 5rem;
 }
 .text_center {
     text-align: center;
@@ -98,7 +101,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 15px;
     z-index: 1;
 }
 .main_right {
@@ -119,43 +121,45 @@ body {
     height: 100vh;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
 
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
-    .text {
-        font-size: 2em;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1450px) {
+    .main {
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 2rem;
     }
-    .text_small {
-        font-size: 1em;
+    .main_left {
+        flex: 1 0 33%;
+        width: 100%;
+        text-align: center;
     }
-    .text_big {
-        font-size: 5em;
+    .main_right {
+        flex: 1 0 66%;
+        margin-right: 0px;
+        width: 100%;
     }
-}
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
-
+    .main_img {
+        object-fit: fill;
+    }
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
 
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (max-width: 1450px) {
-    .greeting {
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
     }
-    .main_left {
-        width: 100%;
-        text-align: center;
-    }
-    .main_right {
-        width: 50%;
-        margin-right: 0px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 450px) {
+    html {
+        font-size: 8px;
     }
 }
