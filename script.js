@@ -1,30 +1,12 @@
-const input = document.querySelector("#inp");
-const list = document.querySelector("#list");
-
-var state = {
-    posts: []
-}
-
-const setState = (newState) => {
-    state = newState;
-    render();
-} 
-
-const render = () => {
-    list.innerHTML = "";
-    state.posts.forEach((el, ind) => {
-        var postBar = Object.assign(document.createElement("div"), {innerHTML: `${ind+1}: ${el}`});
-        postBar.addEventListener('click', event => removePost(ind));
-        list.appendChild(postBar);
-    })
-}
-
-const addPost = () => {
-    setState({...state, posts: [...state.posts, input.value]});
-    input.value = "";
-    input.focus();
-    console.log(state);
-}
-
-const removePost = (id) =>
-    setState({...state, posts: state.posts.filter((el, ind) => ind != id)});
+const header = document.querySelector('.header')
+window.onscroll = function() {
+    var currentScrollPos = window.scrollY;
+    if(currentScrollPos >= 50) {
+        header.style.backgroundColor = `rgba(38, 0, 255, ${Math.min(1, (currentScrollPos-150)/400)})`;
+        header.style.boxShadow = `rgba(0, 0, 0, ${Math.min(0.5, (currentScrollPos-150)/700)}) 0px 5px 25px`;
+    } else {
+        header.style.backgroundColor = "rgba(38, 0, 255, 0)";
+        header.style.boxShadow = `rgba(0, 0, 0, 0) 0px 5px 25px`;
+    }
+    console.log(currentScrollPos);
+  }

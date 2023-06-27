@@ -11,9 +11,22 @@
     width: 100%;
     justify-content: center;
     align-items: center;
-    background-color: rgba(38, 0, 255, 0.5);
     padding: 10px 0px;
     z-index: 2;
+    box-shadow: rgba(0, 0, 0, 0) 0px 5px 25px;
+    /*background-color: transparent;*/
+    background-color: rgba(38, 0, 255, 0);
+    overflow: hidden;
+}
+.header_img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.header_scrolled {
+    transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
+    background-color: rgba(38, 0, 255, 0.8);
     box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 25px;
 }
 .header_button {
@@ -30,39 +43,58 @@
     width: 100vw;
     background-image: url("/bg.jpg");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.main_text {
-    font-size: 5em;
+
+.text {
+    font-size: 2em;
     color: white;
     font-family: "Trebuchet MS";
     font-weight: 300;
 }
-.main_text_small {
+.text_small {
     font-size: 2em;
+}
+.text_offset-small {
+    margin-top: 1em;
+}
+.text_inverse {
+    color: black;
+}
+.text_big {
+    font-size: 5em;
+}
+.text_center {
+    text-align: center;
 }
 .main_left {
     display: flex;
     flex-direction: column;
     gap: 15px;
     height: 300px;
-    padding-left: 125px;
+    padding: 0 70px;
     width: 50%;
     z-index: 1;
 }
 .main_right {
-    height: 50vh;
+    height: 60vh;
     width: 50%;
-    margin-right: 100px;
+    padding-right: 100px;
     z-index: 1;
-    background-image: url("/icpc_photo.jpg");
-    background-position: center;
-    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+.main_img {
+    margin: auto;
+    display: block;
+    width: 100%;
+    object-fit: contain;
     box-shadow: rgba(38, 0, 255, 0.5) 0px 0px 100px;
 }
+
 .main::before {
     content: " ";
     position: absolute;
