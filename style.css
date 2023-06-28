@@ -65,13 +65,6 @@ body {
     z-index: 0;
 }
 
-.greeting {
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .text {
     font-size: 2rem;
     color: white;
@@ -82,7 +75,7 @@ body {
     font-size: 1.5rem;
 }
 .text_offset-small {
-    margin-top: 1rem;
+    padding-top: 2rem;
 }
 .text_inverse {
     color: black;
@@ -95,8 +88,8 @@ body {
 }
 .main_left {
     width: 45%;
-    display: block;
-    padding: 50px;
+    display: flex;
+    margin: 3rem 3rem 0 3rem;
     word-wrap: break-word;
     flex-direction: column;
     align-items: center;
@@ -112,7 +105,8 @@ body {
 .main_img {
     margin: auto;
     display: block;
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     box-shadow: rgba(38, 0, 255, 0.5) 0px 0px 100px;
 }
@@ -120,24 +114,42 @@ body {
 .about {
     height: 100vh;
 }
+.examples {
+    height: 100vh;
+    background-color: black;
+}
+.main-btn {
+    display: block;
+    width: fit-content;
+    font-size: 2rem;
+    border: 2px solid white;
+    color: white;
+    font-family: "Trebuchet MS";
+    padding: 1.2rem;
+}
+.main-btn_offset_around {
+    margin: 2rem;
+}
 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1450px) {
+    html {
+        font-size: 12px;
+    }
     .main {
         flex-direction: column;
-        justify-content: space-around;
-        padding-top: 2rem;
+        justify-content: center;
     }
     .main_left {
-        flex: 1 0 33%;
         width: 100%;
         text-align: center;
     }
     .main_right {
-        flex: 1 0 66%;
         margin-right: 0px;
-        width: 100%;
+        max-height: 55vh;
+        width: auto;
+        max-width: 90vmin;
     }
     .main_img {
         object-fit: fill;
@@ -145,17 +157,15 @@ body {
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-
+   
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
-
+   
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
+    
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 450px) {
