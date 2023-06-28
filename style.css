@@ -12,7 +12,7 @@ body {
     position: relative;
 }
 .header {
-    position: sticky;
+    position: fixed;
     top: 0px;
     left: 0px;
     display: flex;
@@ -46,14 +46,14 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 } 
 .main {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100vh;
     width: 100vw;
     background-image: url("/bg.jpg");
     background-position: center;
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .main::before {
