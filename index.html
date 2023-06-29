@@ -18,18 +18,33 @@
           <a href="#examples" class="main-btn main-btn_offset_around">Проекты</a>
         </div>
         <div class="main_right text">
-          <img class="main_img" src="/icpc_photo.png"></img>
+          <img class="main_img" src="/images/icpc_photo.png"></img>
         </div>
     </main>
-    <section id="about" class="about">
-      <h1 class="text text_inverse text_center text_offset-small">Что я умею?</h1>
+    <div id="about" class="anchor"></div>
+    <section class="about">
+      <h1 class="text text_inverse text_center text_mid text_offset-small">Что я умею?</h1>
       <div class="dbox">
-        <div class="dbox_left">One</div>
-        <div class="dbox_right">Two</div>
+        <div class="dbox_right text text_inverse text_strong dbox_indent">Осваиваю PostgreSQL, Express, React и Node.js стэк(PERN Stack). Владею основами языка JavaScript и базовыми навыками вёрстки(html, css)</div>
+        <div class="dbox_left"><img onclick='openImg("pern.png")' class="dbox_img" src="/images/pern.png"/></div>
+      </div>
+      <div class="dbox">
+        <div class="dbox_left text text_inverse text_strong dbox_indent">Увлекаюсь спортивным программированием. Занимаю призовые места в региональных и всероссийских соревнованиях</div>
+        <div class="dbox_right"><img onclick='openImg("icpc_polufinal.jpg")' class="dbox_img" src="/images/icpc_polufinal.jpg"/></div>
       </div>
     </section>
-    <section id="examples" class="examples">
-      <h1 class="text text_center text_offset-small">Мои работы</h1>
+    <br/><hr/><br/>
+    <div id="examples" class="anchor"></div>
+    <section class="examples">
+      <h1 class="text text_inverse text_center text_mid text_offset-small">Мои работы</h1>
+      <div class="dbox">
+        <div class="dbox_right text text_inverse text_strong dbox_indent"><a href="http://studysheet.ru">StudySHEET.ru</a> - удобный сервис для представления расписаний. Показ ближайшего события в реальном времени позволяет легче планировать своё время, а своим расписанием можно делиться по ссылке</div>
+        <div class="dbox_left"><img onclick='openImg("studysheet.png")' class="dbox_img" src="/images/studysheet.png"/></div>
+      </div>
+      <div class="dbox">
+        <div class="dbox_left text text_inverse text_strong dbox_indent"><a href="http://learncolors.ru">LearnColors.ru</a> - лаконичная онлайн-викторина на знание цветов. Угадывая, можно расширить свой "цветовой" запас и удивить знакомых</div>
+        <div class="dbox_right"><img onclick='openImg("learncolors.png")' class="dbox_img" src="/images/learncolors.png"/></div>
+      </div>
     </section>
     <script src="script.js"></script>
   </body>

@@ -33,11 +33,6 @@ body {
     left: 0;
     width: 100%;
 }
-.header_scrolled {
-    transition: background-color 300ms ease-out, box-shadow 300ms ease-out;
-    background-color: rgba(38, 0, 255, 0.8);
-    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 25px;
-}
 .header_button {
     padding: 10px 20px;
     text-align: center;
@@ -48,7 +43,7 @@ body {
 .main {
     height: 100vh;
     width: 100vw;
-    background-image: url("/bg.jpg");
+    background-image: url("/images/bg.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -65,20 +60,57 @@ body {
     z-index: 0;
 }
 
+.dbox {
+    display: block;
+    clear: both;
+}
+.dbox::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+.dbox_offset {
+    margin-top: 2rem;
+}
+.dbox_indent {
+    text-indent: 3rem;
+}
+.dbox_left {
+    padding: 50px;
+    float: left;
+    width: 50%;
+}
+.dbox_right {
+    padding: 50px;
+    float: right;
+    width: 50%;
+}
+.dbox_img {
+    max-width: 100%;
+    max-height: 100%;
+    cursor: pointer;
+}
+
 .text {
     font-size: 2rem;
     color: white;
     font-family: "Trebuchet MS";
     font-weight: 300;
 }
+.text_strong {
+    font-weight: 500;
+}
 .text_small {
     font-size: 1.5rem;
 }
 .text_offset-small {
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 .text_inverse {
     color: black;
+}
+.text_mid {
+    font-size: 3rem;
 }
 .text_big {
     font-size: 5rem;
@@ -111,13 +143,6 @@ body {
     box-shadow: rgba(38, 0, 255, 0.5) 0px 0px 100px;
 }
 
-.about {
-    height: 100vh;
-}
-.examples {
-    height: 100vh;
-    background-color: black;
-}
 .main-btn {
     display: block;
     width: fit-content;
@@ -131,6 +156,27 @@ body {
     margin: 2rem;
 }
 
+.anchor {
+    display: block;
+    position: relative;
+    top: -4rem;
+    visibility: hidden;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal_img {
+    max-width: 90vw;
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1450px) {
@@ -157,7 +203,17 @@ body {
 }
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (max-width: 992px) {
-   
+    .dbox > *:first-child {
+        padding: 40px 20px 40px 20px;
+    }
+    .dbox_left {
+        width: 100%;
+        padding: 0;
+    }
+    .dbox_right {
+        width: 100%;
+        padding: 0;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
