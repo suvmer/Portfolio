@@ -152,6 +152,10 @@ body {
     color: white;
     font-family: "Trebuchet MS";
     padding: 1.2rem;
+    background-color: rgba(38, 0, 255, 0);
+}
+.main-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .main-btn_offset_around {
     margin: 2rem;
