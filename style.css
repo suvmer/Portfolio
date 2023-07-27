@@ -313,3 +313,8 @@ body {
         font-size: 8px;
     }
 }
+@media only screen and (max-height: 700px) {
+    html {
+        font-size: 8px;
+    }
+}
